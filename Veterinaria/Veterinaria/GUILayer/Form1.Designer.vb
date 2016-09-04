@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class frm_login
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,9 +22,102 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.btn_salir_logueo = New System.Windows.Forms.Button()
+        Me.btn_iniciar_sesion = New System.Windows.Forms.Button()
+        Me.txt_nombre_usuario = New System.Windows.Forms.TextBox()
+        Me.txt_contraseña = New System.Windows.Forms.TextBox()
+        Me.lbl_usuario = New System.Windows.Forms.Label()
+        Me.lbl_contraseña = New System.Windows.Forms.Label()
+        Me.lbl_mensajes = New System.Windows.Forms.Label()
+        Me.SuspendLayout()
+        '
+        'btn_salir_logueo
+        '
+        Me.btn_salir_logueo.Location = New System.Drawing.Point(197, 89)
+        Me.btn_salir_logueo.Name = "btn_salir_logueo"
+        Me.btn_salir_logueo.Size = New System.Drawing.Size(103, 23)
+        Me.btn_salir_logueo.TabIndex = 0
+        Me.btn_salir_logueo.Text = "Salir"
+        Me.btn_salir_logueo.UseVisualStyleBackColor = True
+        '
+        'btn_iniciar_sesion
+        '
+        Me.btn_iniciar_sesion.Location = New System.Drawing.Point(41, 89)
+        Me.btn_iniciar_sesion.Name = "btn_iniciar_sesion"
+        Me.btn_iniciar_sesion.Size = New System.Drawing.Size(103, 23)
+        Me.btn_iniciar_sesion.TabIndex = 1
+        Me.btn_iniciar_sesion.Text = "Iniciar Sesiòn"
+        Me.btn_iniciar_sesion.UseVisualStyleBackColor = True
+        '
+        'txt_nombre_usuario
+        '
+        Me.txt_nombre_usuario.Location = New System.Drawing.Point(76, 10)
+        Me.txt_nombre_usuario.Name = "txt_nombre_usuario"
+        Me.txt_nombre_usuario.Size = New System.Drawing.Size(138, 20)
+        Me.txt_nombre_usuario.TabIndex = 2
+        Me.txt_nombre_usuario.Text = "Ingrese su usuario"
+        Me.txt_nombre_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txt_contraseña
+        '
+        Me.txt_contraseña.Location = New System.Drawing.Point(76, 36)
+        Me.txt_contraseña.Name = "txt_contraseña"
+        Me.txt_contraseña.Size = New System.Drawing.Size(138, 20)
+        Me.txt_contraseña.TabIndex = 3
+        Me.txt_contraseña.Text = "Ingrese su contraseña"
+        Me.txt_contraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'lbl_usuario
+        '
+        Me.lbl_usuario.AutoSize = True
+        Me.lbl_usuario.Location = New System.Drawing.Point(17, 17)
+        Me.lbl_usuario.Name = "lbl_usuario"
+        Me.lbl_usuario.Size = New System.Drawing.Size(46, 13)
+        Me.lbl_usuario.TabIndex = 4
+        Me.lbl_usuario.Text = "Usuario:"
+        '
+        'lbl_contraseña
+        '
+        Me.lbl_contraseña.AutoSize = True
+        Me.lbl_contraseña.Location = New System.Drawing.Point(-1, 43)
+        Me.lbl_contraseña.Name = "lbl_contraseña"
+        Me.lbl_contraseña.Size = New System.Drawing.Size(64, 13)
+        Me.lbl_contraseña.TabIndex = 5
+        Me.lbl_contraseña.Text = "Contraseña:"
+        '
+        'lbl_mensajes
+        '
+        Me.lbl_mensajes.AutoSize = True
+        Me.lbl_mensajes.Location = New System.Drawing.Point(233, 27)
+        Me.lbl_mensajes.Name = "lbl_mensajes"
+        Me.lbl_mensajes.Size = New System.Drawing.Size(67, 13)
+        Me.lbl_mensajes.TabIndex = 6
+        Me.lbl_mensajes.Text = "lbl_mensajes"
+        '
+        'frm_login
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Text = "Form1"
+        Me.ClientSize = New System.Drawing.Size(353, 124)
+        Me.Controls.Add(Me.lbl_mensajes)
+        Me.Controls.Add(Me.lbl_contraseña)
+        Me.Controls.Add(Me.lbl_usuario)
+        Me.Controls.Add(Me.txt_contraseña)
+        Me.Controls.Add(Me.txt_nombre_usuario)
+        Me.Controls.Add(Me.btn_iniciar_sesion)
+        Me.Controls.Add(Me.btn_salir_logueo)
+        Me.Name = "frm_login"
+        Me.Text = "Login"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
+    Friend WithEvents btn_salir_logueo As System.Windows.Forms.Button
+    Friend WithEvents btn_iniciar_sesion As System.Windows.Forms.Button
+    Friend WithEvents txt_nombre_usuario As System.Windows.Forms.TextBox
+    Friend WithEvents txt_contraseña As System.Windows.Forms.TextBox
+    Friend WithEvents lbl_usuario As System.Windows.Forms.Label
+    Friend WithEvents lbl_contraseña As System.Windows.Forms.Label
+    Friend WithEvents lbl_mensajes As System.Windows.Forms.Label
 
 End Class

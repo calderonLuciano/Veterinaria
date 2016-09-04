@@ -70,6 +70,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\Entities\User.vb" />
+    <Compile Include="BusinessLayer\Services\UserService.vb" />
+    <Compile Include="DataLayer\DAOs\UserDao.vb" />
+    <Compile Include="DataLayer\Helper\BDHelper.vb" />
     <Compile Include="GUILayer\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +98,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUILayer\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -112,12 +119,13 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="BusinessLayer\Entities\" />
-    <Folder Include="BusinessLayer\Services\" />
-    <Folder Include="DataLayer\DAOs\" />
-    <Folder Include="DataLayer\Helper\" />
-    <Folder Include="Resources\" />
+    <Content Include="Resources\edit2.ico" />
+    <Content Include="Resources\insert.ico" />
+    <Content Include="Resources\remove.ico" />
+    <Content Include="Resources\save.ico" />
+    <Content Include="Resources\search.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
