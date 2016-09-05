@@ -5,7 +5,7 @@ Public Class BDHelper
     Private Shared instance As BDHelper 'Unica instancia de la clase
 
     Private Sub New()
-        string_conexion = "Data Source=maquis;Initial Catalog=DB_Bugs;Persist Security Info=True;User ID=avisuales1; Password=avisuales1"
+        string_conexion = "Data Source=JUAN-PC;Initial Catalog=Veterinaria;Integrated Security=True"
     End Sub
 
     Public Shared Function getDBHelper() As BDHelper

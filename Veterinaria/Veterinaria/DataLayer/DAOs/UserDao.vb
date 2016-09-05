@@ -5,7 +5,7 @@
         Dim oTable As DataTable
 
         'Armamos el query para ejecutar a la base
-        Dim strSQL As String = "SELECT * from Users WHERE n_usuario = '" + usuario + "' AND password = '" + pass + "'"
+        Dim strSQL As String = "SELECT * from Usuarios WHERE n_usuario = '" + usuario + "' AND password = '" + pass + "'"
         'Delegamos la ejecución del comando SQL al Helper
         oTable = BDHelper.getDBHelper().ConsultaSQL(strSQL)
         'Con la tabla devuelta por el Helper creamos un OBJETO User a partir de los datos de fila de la tabla Users

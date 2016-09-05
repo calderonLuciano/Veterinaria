@@ -74,11 +74,23 @@
     <Compile Include="BusinessLayer\Services\UserService.vb" />
     <Compile Include="DataLayer\DAOs\UserDao.vb" />
     <Compile Include="DataLayer\Helper\BDHelper.vb" />
-    <Compile Include="GUILayer\Form1.vb">
+    <Compile Include="GUILayer\frm_loguin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="GUILayer\frm_loguin.Designer.vb">
+      <DependentUpon>frm_loguin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frm_empleado.Designer.vb">
+      <DependentUpon>frm_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frm_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frm_principal.Designer.vb">
+      <DependentUpon>frm_principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frm_principal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -98,8 +110,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUILayer\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="GUILayer\frm_loguin.resx">
+      <DependentUpon>frm_loguin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frm_principal.resx">
+      <DependentUpon>frm_principal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

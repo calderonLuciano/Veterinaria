@@ -1,1 +1,11 @@
 C:\Users\Luciano\Desktop\WorkspaceV\Veterinaria\Veterinaria\bin\Debug\Veterinaria.exe.config
+C:\Users\Juan\Desktop\Workspacevet\Veterinaria\Veterinaria\Veterinaria\obj\Debug\Veterinaria.frm_login.resources
+C:\Users\Juan\Desktop\Workspacevet\Veterinaria\Veterinaria\Veterinaria\obj\Debug\Veterinaria.Resources.resources
+C:\Users\Juan\Desktop\Workspacevet\Veterinaria\Veterinaria\Veterinaria\obj\Debug\Veterinaria.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Workspacevet\Veterinaria\Veterinaria\Veterinaria\bin\Debug\Veterinaria.exe
+C:\Users\Juan\Desktop\Workspacevet\Veterinaria\Veterinaria\Veterinaria\bin\Debug\Veterinaria.pdb
+C:\Users\Juan\Desktop\Workspacevet\Veterinaria\Veterinaria\Veterinaria\bin\Debug\Veterinaria.xml
+C:\Users\Juan\Desktop\Workspacevet\Veterinaria\Veterinaria\Veterinaria\obj\Debug\Veterinaria.exe
+C:\Users\Juan\Desktop\Workspacevet\Veterinaria\Veterinaria\Veterinaria\obj\Debug\Veterinaria.xml
+C:\Users\Juan\Desktop\Workspacevet\Veterinaria\Veterinaria\Veterinaria\obj\Debug\Veterinaria.pdb
+C:\Users\Juan\Desktop\Workspacevet\Veterinaria\Veterinaria\Veterinaria\obj\Debug\Veterinaria.frm_principal.resources
