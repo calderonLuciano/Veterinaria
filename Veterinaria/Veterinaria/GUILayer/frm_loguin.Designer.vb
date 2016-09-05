@@ -86,7 +86,6 @@ Partial Class frm_login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.btn_salir_logueo
         Me.ClientSize = New System.Drawing.Size(275, 116)
         Me.Controls.Add(Me.lbl_contraseña)
         Me.Controls.Add(Me.lbl_usuario)
@@ -95,7 +94,7 @@ Partial Class frm_login
         Me.Controls.Add(Me.btn_iniciar_sesion)
         Me.Controls.Add(Me.btn_salir_logueo)
         Me.Name = "frm_login"
-        Me.Text = "Login"
+        Me.Text = ".:. Login .:."
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
