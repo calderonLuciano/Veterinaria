@@ -46,10 +46,13 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -70,21 +73,66 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\Entities\Consulta.vb" />
+    <Compile Include="BusinessLayer\Entities\Diagnostico.vb" />
+    <Compile Include="BusinessLayer\Entities\DiagnosticoxConsulta.vb" />
+    <Compile Include="BusinessLayer\Entities\Dueño.vb" />
+    <Compile Include="BusinessLayer\Entities\Medicamento.vb" />
+    <Compile Include="BusinessLayer\Entities\MedicamentoxConsulta.vb" />
+    <Compile Include="BusinessLayer\Entities\Perro.vb" />
+    <Compile Include="BusinessLayer\Entities\Sintoma.vb" />
+    <Compile Include="BusinessLayer\Entities\SintomaxConsulta.vb" />
+    <Compile Include="BusinessLayer\Services\ConsultaService.vb" />
+    <Compile Include="BusinessLayer\Services\DiagnosticoService.vb" />
+    <Compile Include="BusinessLayer\Services\DiagnosticoxConsultaService.vb" />
+    <Compile Include="BusinessLayer\Services\DueñoService.vb" />
+    <Compile Include="BusinessLayer\Services\MedicamentoService.vb" />
+    <Compile Include="BusinessLayer\Services\MedicamentoxConsultaService.vb" />
+    <Compile Include="BusinessLayer\Services\PerroService.vb" />
+    <Compile Include="BusinessLayer\Services\SintomaService.vb" />
+    <Compile Include="BusinessLayer\Services\SintomaxConsultaService.vb" />
+    <Compile Include="DataLayer\DAOs\ConsultaDao.vb" />
+    <Compile Include="DataLayer\DAOs\DiagnosticoDao.vb" />
+    <Compile Include="DataLayer\DAOs\DiagnosticoxConsultaDao.vb" />
+    <Compile Include="DataLayer\DAOs\DueñoDao.vb" />
+    <Compile Include="DataLayer\DAOs\MedicamentoDao.vb" />
+    <Compile Include="BusinessLayer\Entities\Empleado.vb" />
+    <Compile Include="BusinessLayer\Entities\Laboratorio.vb" />
+    <Compile Include="BusinessLayer\Entities\Sucursal.vb" />
     <Compile Include="BusinessLayer\Entities\User.vb" />
+    <Compile Include="BusinessLayer\Services\EmpleadoService.vb" />
+    <Compile Include="BusinessLayer\Services\LaboratorioService.vb" />
     <Compile Include="BusinessLayer\Services\UserService.vb" />
+    <Compile Include="DataLayer\DAOs\EmpleadoDao.vb" />
+    <Compile Include="DataLayer\DAOs\LaboratorioDao.vb" />
+    <Compile Include="DataLayer\DAOs\MedicamentoxConsultaDao.vb" />
+    <Compile Include="DataLayer\DAOs\PerroDao.vb" />
+    <Compile Include="DataLayer\DAOs\SintomaDao.vb" />
+    <Compile Include="DataLayer\DAOs\SintomaxConsultaDao.vb" />
     <Compile Include="DataLayer\DAOs\UserDao.vb" />
     <Compile Include="DataLayer\Helper\BDHelper.vb" />
-    <Compile Include="GUILayer\frm_loguin.vb">
+    <Compile Include="GUILayer\Frm Carga\frm_cargaDiagnostico.Designer.vb">
+      <DependentUpon>frm_cargaDiagnostico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaDiagnostico.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frm_loguin.Designer.vb">
-      <DependentUpon>frm_loguin.vb</DependentUpon>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaSintoma.Designer.vb">
+      <DependentUpon>frm_cargaSintoma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaSintoma.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frm_empleado.Designer.vb">
-      <DependentUpon>frm_empleado.vb</DependentUpon>
+    <Compile Include="GUILayer\Frm Editar\frm_editarDiagnostico.Designer.vb">
+      <DependentUpon>frm_editarDiagnostico.vb</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frm_empleado.vb">
+    <Compile Include="GUILayer\Frm Editar\frm_editarDiagnostico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarSintoma.Designer.vb">
+      <DependentUpon>frm_editarSintoma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarSintoma.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUILayer\frm_principal.Designer.vb">
@@ -92,6 +140,102 @@
     </Compile>
     <Compile Include="GUILayer\frm_principal.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frm_Consulta.Designer.vb">
+      <DependentUpon>frm_Consulta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frm_Consulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaDueño.Designer.vb">
+      <DependentUpon>frm_cargaDueño.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaDueño.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaLaboratorio.Designer.vb">
+      <DependentUpon>frm_cargaLaboratorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaLaboratorio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaMedicamento.Designer.vb">
+      <DependentUpon>frm_cargaMedicamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaMedicamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaPerro.Designer.vb">
+      <DependentUpon>frm_cargaPerro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaPerro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarDueño.Designer.vb">
+      <DependentUpon>frm_editarDueño.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarDueño.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarEmpleado.Designer.vb">
+      <DependentUpon>frm_editarEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarLaboratorio.Designer.vb">
+      <DependentUpon>frm_editarLaboratorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarLaboratorio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarMedicamento.Designer.vb">
+      <DependentUpon>frm_editarMedicamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarMedicamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarPerro.Designer.vb">
+      <DependentUpon>frm_editarPerro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Editar\frm_editarPerro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frm_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frm_login.Designer.vb">
+      <DependentUpon>frm_login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaEmpleado.Designer.vb">
+      <DependentUpon>frm_cargaEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Frm Carga\frm_cargaEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\InformeEmpleadosPorSucursal.Designer.vb">
+      <DependentUpon>InformeEmpleadosPorSucursal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\InformeEmpleadosPorSucursal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\InformePerrosPorRaza.Designer.vb">
+      <DependentUpon>InformePerrosPorRaza.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\InformePerrosPorRaza.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\InformeRazasMasAtendidas.Designer.vb">
+      <DependentUpon>InformeRazasMasAtendidas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\InformeRazasMasAtendidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\Data\DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -110,12 +254,68 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUILayer\frm_loguin.resx">
-      <DependentUpon>frm_loguin.vb</DependentUpon>
+    <EmbeddedResource Include="GUILayer\Frm Carga\frm_cargaDiagnostico.resx">
+      <DependentUpon>frm_cargaDiagnostico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Carga\frm_cargaSintoma.resx">
+      <DependentUpon>frm_cargaSintoma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Editar\frm_editarDiagnostico.resx">
+      <DependentUpon>frm_editarDiagnostico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Editar\frm_editarSintoma.resx">
+      <DependentUpon>frm_editarSintoma.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frm_principal.resx">
       <DependentUpon>frm_principal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frm_Consulta.resx">
+      <DependentUpon>frm_Consulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Carga\frm_cargaDueño.resx">
+      <DependentUpon>frm_cargaDueño.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Carga\frm_cargaEmpleado.resx">
+      <DependentUpon>frm_cargaEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Carga\frm_cargaLaboratorio.resx">
+      <DependentUpon>frm_cargaLaboratorio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Carga\frm_cargaMedicamento.resx">
+      <DependentUpon>frm_cargaMedicamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Carga\frm_cargaPerro.resx">
+      <DependentUpon>frm_cargaPerro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Editar\frm_editarDueño.resx">
+      <DependentUpon>frm_editarDueño.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Editar\frm_editarEmpleado.resx">
+      <DependentUpon>frm_editarEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Editar\frm_editarLaboratorio.resx">
+      <DependentUpon>frm_editarLaboratorio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Editar\frm_editarMedicamento.resx">
+      <DependentUpon>frm_editarMedicamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Frm Editar\frm_editarPerro.resx">
+      <DependentUpon>frm_editarPerro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frm_login.resx">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\InformeEmpleadosPorSucursal.resx">
+      <DependentUpon>InformeEmpleadosPorSucursal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\InformePerrosPorRaza.resx">
+      <DependentUpon>InformePerrosPorRaza.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\InformeRazasMasAtendidas.resx">
+      <DependentUpon>InformeRazasMasAtendidas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Reportes\Diseño\Report1.rdlc" />
+    <EmbeddedResource Include="GUILayer\Reportes\Diseño\Report2.rdlc" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -124,6 +324,18 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="GUILayer\Reportes\Data\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GUILayer\Reportes\Data\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="GUILayer\Reportes\Data\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -136,11 +348,60 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\add.ico" />
+    <None Include="Resources\cancel.ico" />
+    <None Include="Resources\ahi va.png" />
+    <None Include="Resources\cancel1.ico" />
+    <None Include="Resources\asd.png" />
+    <None Include="Resources\display.ico" />
+    <None Include="Resources\Btn Atencion.png" />
+    <None Include="Resources\Btn Atencion1.png" />
+    <None Include="Resources\atenc.png" />
+    <None Include="Resources\asdas.png" />
+    <None Include="Resources\down.ico" />
+    <None Include="Resources\Custom-Icon-Design-Flatastic-9-Login.ico" />
+    <None Include="Resources\Atyourservice-Service-Categories-Cleaning.ico" />
     <Content Include="Resources\edit2.ico" />
+    <None Include="Resources\edit21.ico" />
+    <None Include="Resources\folder.ico" />
+    <None Include="Resources\frmcargaempleado.png" />
+    <None Include="Resources\este vale.png" />
+    <None Include="Resources\Editar empleado.png" />
+    <None Include="Resources\find.ico" />
+    <None Include="Resources\Editar laboratorio.png" />
+    <None Include="Resources\editar laboratorio1.png" />
+    <None Include="Resources\editar medicamentos.png" />
+    <None Include="Resources\editar medicamentos1.png" />
+    <None Include="Resources\Editar dueño.png" />
+    <None Include="Resources\editar perros.png" />
+    <None Include="Resources\Editar sintoma.png" />
+    <None Include="Resources\editar diagnostico.png" />
+    <None Include="Resources\frmAtencion.png" />
+    <None Include="Resources\Iconshock-Vista-General-Trash.ico" />
     <Content Include="Resources\insert.ico" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\panel principal.png" />
+    <None Include="Resources\registrar laboratorio.png" />
+    <None Include="Resources\Registrar empleado.png" />
+    <None Include="Resources\registrar laboratorio1.png" />
+    <None Include="Resources\Registrar Dueño.png" />
+    <None Include="Resources\Registrar Dueño1.png" />
+    <None Include="Resources\Registrar medicamento.png" />
+    <None Include="Resources\registrar perros.png" />
+    <None Include="Resources\Registrar diagnostico.png" />
+    <None Include="Resources\registrar sintoma.png" />
+    <None Include="Resources\pluma-de-registro-del-disco-registro-por-escrito-icono-8830-48.png" />
     <Content Include="Resources\remove.ico" />
+    <None Include="Resources\remove1.ico" />
+    <None Include="Resources\salvar-icono-7378-48.png" />
+    <None Include="Resources\salir-de-mi-perfil-icono-3964-32.png" />
     <Content Include="Resources\save.ico" />
+    <None Include="Resources\save1.ico" />
     <Content Include="Resources\search.ico" />
+    <None Include="Resources\up.ico" />
+    <None Include="Resources\Sin título-3.png" />
+    <None Include="Resources\Sin título-31.png" />
+    <Content Include="Resources\users.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
